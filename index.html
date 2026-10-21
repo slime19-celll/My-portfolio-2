@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekpedekumo Destine Tubolayefa | Portfolio</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+    position: relative;
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+}
+
+.nav {
+    max-width: 1050px;
+    margin: auto;
+    min-height: 72px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav ul a:hover {
+    color: #8a4b2a;
+}
+
+.hero {
+    max-width: 1050px;
+    min-height: 610px;
+    margin: auto;
+    padding: 80px 25px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #8a4b2a;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.08;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 570px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.secondary-btn {
+    text-decoration: none;
+    padding: 11px 20px;
+    font-size: 14px;
+}
+
+.primary-btn {
+    background: #222;
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid #aaa;
+    color: #222;
+}
+
+.student-card {
+    background: #f1ece8;
+    padding: 40px 30px;
+    border-left: 5px solid #8a4b2a;
+}
+
+/* Styled profile image on the right */
+.hero {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 55px;
+}
+.hero-content { min-width: 0; }
+.profile-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.profile-wrap::before {
+    content: "";
+    position: absolute;
+    width: 78%;
+    height: 82%;
+    right: -8px;
+    bottom: 5px;
+    background: #8a4b2a;
+    border-radius: 180px 180px 18px 18px;
+    z-index: -1;
+}
+.profile-picture {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 180px 180px 18px 18px;
+    border: 7px solid #f1ece8;
+    box-shadow: 0 18px 40px rgba(45, 30, 20, 0.16);
+    background: #f1ece8;
+}
+
+.student-card p {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #8a4b2a;
+    margin-bottom: 25px;
+}
+
+.student-card h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 35px;
+}
+
+.student-card span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.student-card strong {
+    font-size: 20px;
+}
+
+.section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 85px 25px;
+}
+
+.grey {
+    max-width: none;
+    padding-left: max(25px, calc((100% - 1000px) / 2));
+    padding-right: max(25px, calc((100% - 1000px) / 2));
+    background: #f6f6f6;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.heading span {
+    color: #8a4b2a;
+    font-size: 13px;
+}
+
+.heading h2 {
+    font-size: 31px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.about-grid p {
+    color: #555;
+    max-width: 480px;
+}
+
+.skill-list {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill-list > div {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    min-height: 175px;
+}
+
+.skill-list b {
+    color: #8a4b2a;
+    font-size: 12px;
+}
+
+.skill-list h3 {
+    margin: 25px 0 10px;
+}
+
+.skill-list p {
+    color: #666;
+    font-size: 14px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.project-list article {
+    border: 1px solid #ddd;
+    padding: 25px;
+    min-height: 290px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #8a4b2a;
+    margin-bottom: 35px;
+}
+
+.project-list h3 {
+    font-size: 21px;
+    margin-bottom: 13px;
+}
+
+.project-list p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.project-list a {
+    margin-top: auto;
+    color: #222;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.education-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+}
+
+.education-box span {
+    font-size: 12px;
+    color: #8a4b2a;
+}
+
+.education-box h3 {
+    margin: 8px 0 3px;
+    font-size: 23px;
+}
+
+.education-box p {
+    color: #666;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.achievement-grid div {
+    border-top: 3px solid #222;
+    padding: 22px 0;
+}
+
+.achievement-grid h3 {
+    margin-bottom: 10px;
+}
+
+.achievement-grid p {
+    color: #666;
+    font-size: 14px;
+}
+
+.contact {
+    background: #222;
+    color: white;
+    padding: 85px 25px;
+    text-align: center;
+}
+
+.contact .label {
+    color: #d09b79;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.contact-info {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contact-info p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.contact-info strong {
+    display: inline-block;
+    color: white;
+    margin-bottom: 7px;
+}
+
+footer {
+    background: #181818;
+    color: #aaa;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        flex-direction: column;
+        padding: 18px 20px;
+        gap: 15px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .profile-wrap { justify-content: center; }
+    .profile-picture {
+        max-width: 300px;
+        height: 350px;
+    }
+    .profile-wrap::before {
+        right: calc(50% - 155px);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .about-grid,
+    .skill-list,
+    .project-list,
+    .achievement-grid,
+    .education-box,
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav">
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#learning">Projects</a></li>
+            <li><a href="#education">Education/ Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="label">COMPUTER SCIENCE STUDENT</p>
+            <h1>Ekpedekumo<br>Destine Tubolayefa</h1>
+            <p class="intro">
+                Welcome to my personal portfolio. This website contains
+                information about my skills, projects, education and interests
+                in computing.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="secondary-btn">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="profile-wrap">
+            <img src="IMG-20261021-WA0018.jpg" alt="Portrait of Ekpedekumo Destine Tubolayefa" class="profile-picture">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+            <p>
+                My name is Ekpedekumo Tubolayefa Destine, a Computer Science student and aspiring Software Developer. I’m passionate about technology, solving real-world problems, and building a career by creating meaningful software solutions. I’m a 300 level Computer Science student studying in Bayelsa Medical University. I have hands-on skills in HTML and CSS and I’m continuously learning and improving my development skills. 
+            </p>
+
+            <p>
+                My goal is to continue improving my technical abilities and
+                gain experience in my chosen area of computing. I am also
+                interested in learning new technologies and applying them to
+                useful projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="section grey">
+        <div class="heading">
+            <h2>Skills</h2>
+        </div>
+
+        <div class="skill-list">
+            <div>
+                <h3>HTML</h3>
+                <p>Building the structure of web pages.</p>
+            </div>
+
+            <div>
+                <h3>CSS</h3>
+                <p>Designing and styling responsive web pages.</p>
+            </div>
+
+            <div>
+                <h3>Git & GitHub</h3>
+                <p>Managing and publishing web projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="learning" class="section">
+        <div class="heading">
+            <h2>Learning Journey</h2>
+        </div>
+    
+        <div class="project-list">
+    
+            <article>
+                <div class="project-top">
+                    <span>LEARNING 01</span>
+                    <span>WEB</span>
+                </div>
+                <h3>Web Development</h3>
+                <p>
+                    Learning the fundamentals of HTML and CSS while practising
+                    website structure, styling and responsive design.
+                </p>
+            </article>
+    
+            <article>
+                <div class="project-top">
+                    <span>LEARNING 02</span>
+                    <span>PROGRAMMING</span>
+                </div>
+                <h3>Programming Fundamentals</h3>
+                <p>
+                    Developing an understanding of programming concepts,
+                    problem solving and basic software development.
+                </p>
+            </article>
+    
+            <article>
+                <div class="project-top">
+                    <span>LEARNING 03</span>
+                    <span>DESIGN</span>
+                </div>
+                <h3>UI Design Practice</h3>
+                <p>
+                    Practising simple webpage layouts and user interface designs
+                    to improve my understanding of visual structure and usability.
+                </p>
+            </article>
+    
+        </div>
+    </section>
+
+    <section id="education" class="section grey">
+        <div class="heading">
+            <h2>Education</h2>
+        </div>
+
+        <div class="education-box">
+            <div>
+                <span>2024 - PRESENT</span>
+                <h3>Computer Science</h3>
+                <p>Bayelsa Medical University</p>
+            </div>
+
+            <p>
+                I am a 300L Computer Science student at Bayelsa Medical University
+                with an interest in web development, programming and software design.
+                I am currently developing my technical skills through coursework,
+                practical exercises and personal learning.
+            </p>
+        </div>
+    </section>
+
+    <section id="achievements" class="section">
+        <div class="heading">
+            <h2>Achievements</h2>
+        </div>
+    
+        <div class="achievement-grid">
+            <div>
+                <h3>Academic</h3>
+                <p>
+                    Currently focused on my academic growth and developing
+                    my knowledge in Computer Science.
+                </p>
+            </div>
+    
+            <div>
+                <h3>Skills Development</h3>
+                <p>
+                    Continuously learning and improving my technical and
+                    problem-solving skills.
+                </p>
+            </div>
+    
+            <div>
+                <h3>Future Goals</h3>
+                <p>
+                    Working towards completing practical projects and
+                    building experience in the technology field.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <p class="label">GET IN TOUCH</p>
+        <h2>Contact Me</h2>
+
+        <div class="contact-info">
+            <p><strong>Email</strong><br>ekpedekumodestine9@gmail.com</p>
+            <p><strong>Phone</strong><br>+2348 169 029 940</p>
+            <p><strong>GitHub</strong><br>https://github.com/slime19-celll</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Ekpedekumo Destine Tubolayefa</p>
+    <p>Matric No: UG/24/0884</p>
+</footer>
+
+</body>
+</html>
